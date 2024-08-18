@@ -70,22 +70,49 @@
           <div class="logo">
             <img src="assets/icons/logo.svg" />
           </div>
+          <div class="hmenu">
+            <img
+              src="assets/icons/charm_menu-hamburger.svg"
+              alt=""
+              id="menuButton"
+            />
+          </div>
           <img src="assets/icons/menu.svg" class="menu" />
           <div class="nav-links">
             <ul>
-              <li>About</li>
-              <li>Offers</li>
-              <li>Corporate</li>
-              <li>Personal</li>
-              <li>Locations</li>
-              <li>Contact us</li>
-              <li><img src="assets/icons/notific.svg" /></li>
+              <a href="#"><li>About</li></a>
+              <a href="#"><li>Offers</li></a>
+              <a href="#"> <li>Corporate</li></a>
+              <a href="#"> <li>Personal</li></a>
+              <a href="#"> <li>Locations</li></a>
+              <a href="#"> <li>Contact us</li></a>
+              <a href="#">
+                <li><img src="assets/icons/notific.svg" /></li
+              ></a>
               <li>
                 <button id="avatarButton">
                   <span id="avatar">J</span><span id="name">John Doe</span>
                 </button>
               </li>
             </ul>
+          </div>
+          <!-- sidebar for mobile -->
+          <div class="sidebar">
+            <img src="assets/icons/menu_close.svg" alt="" id="menu_close" />
+            <ul>
+              <a href="#"> <li>About Us</li></a>
+              <hr />
+              <a href="#"><li>Offers</li></a>
+              <hr />
+              <a href="#"><li>Corporate</li></a>
+              <hr />
+              <a href="#"><li>Personal</li></a>
+              <hr />
+              <a href="#"><li>Locations</li></a>
+              <hr />
+              <a href="#"><li>Contact us</li></a>
+            </ul>
+            <button>Log In/Sign Up</button>
           </div>
         </div>
         <p>
@@ -94,6 +121,7 @@
           on Social Media for New Offers
         </p>
       </div>
+      <!-- -----red layer-------- -->
       <div class="layer">
         <div class="header">
           <div class="header-nav">
@@ -174,6 +202,37 @@
           <img src="assets/icons/24x7.svg" alt="" class="twenty_four" />
         </div>
       </div>
+      <!-- button for responsive design -->
+      <div class="res-buttons">
+        <button class="b1" onclick="toggleQuickBook()" id="quickBookButton">
+          Book a Car
+        </button>
+        <button class="b2">Quick Book</button>
+      </div>
+      <div id="quickBookContent" class="quick_book_content">
+        <div class="tab">
+          <button
+            class="tablinks active"
+            onclick="openTab(event, 'sameAsPickUp')"
+          >
+            Same as Pick-Up
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'differentDropOff')">
+            Different Drop-Off
+          </button>
+          <select id="vehicleType" name="vehicleType">
+            <option value="car">Car</option>
+          </select>
+        </div>
+      </div>
+      <div class="sameAsPickup">
+    <select class="pickup">
+      <option value=""></option>
+    </select>
+    <select class="pickup">
+      <option value=""></option>
+    </select>
+      </div>
       <!-- banner -->
       <div class="banner">
         <p>
@@ -247,9 +306,14 @@
               class="input2"
             />
           </div>
-          <p>
+          <p class="promo-d">
             Don't miss out! enter your email and your name, then hit subscribe
             to unlock a world of special offers and details.
+          </p>
+          <p class="promo-m">
+            Please select the ways you would like to hear from Diamondlease, and
+            confirm that you’re happy for us to store your data in line with our
+            Privacy Policy.
           </p>
           <button>Subscribe</button>
         </div>
@@ -268,6 +332,22 @@
             <div class="promor-img">
               <img src="assets/icons/app_tr.svg" />
               <img src="assets/icons/play_tr.svg" />
+            </div>
+          </div>
+          <!-- promo for mobile -->
+          <div class="promo-text-m">
+            <span>Get in on</span>
+            <div class="promor-img">
+              <img src="assets/icons/app_tr.svg" />
+              <img src="assets/icons/play_tr.svg" />
+            </div>
+            <p>
+              Enter your number and receive&nbsp; a direct link to download the
+              app
+            </p>
+            <div>
+              <input type="tel" name="phone" placeholder="Enter Phone Number" />
+              <button>Get the link</button>
             </div>
           </div>
         </div>
@@ -465,6 +545,59 @@
           <div class="f-line"></div>
           <div class="cr">© 2018 Car rental LLC - All Rights Reserved.</div>
         </div>
+        <!-- --------footer for mobile--------- -->
+        <div class="footer-m">
+          <div class="footer-top">
+            <div class="ft-1">
+              <img src="assets/icons/footer_logo-m.svg" class="ft-logo" />
+              <img src="assets/icons/ft-social.svg" alt="" class="ft-social" />
+            </div>
+            <div class="ft-2">
+              <ul>
+                <li>Home</li>
+                <li>Offers</li>
+                <li>Career</li>
+                <li>About Us</li>
+                <li>Locations</li>
+              </ul>
+            </div>
+            <div class="ft-3">
+              <ul>
+                <li>FAQ</li>
+                <li>Terms & Conditions</li>
+                <li>Service Request</li>
+              </ul>
+            </div>
+            <div class="ft-4">
+              <ul>
+                <li>Privacy Policy</li>
+                <li>Services</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-down">
+            <div class="fd-1">Al Habtoor Companies</div>
+            <div class="fd-2">
+              <ul>
+                <li>Hospitality</li>
+                <li>Real Estate</li>
+                <li>Publishing</li>
+              </ul>
+            </div>
+            <div class="fd-3">
+              <ul>
+                <li>Automotive</li>
+                <li>Vehicle Leasing</li>
+              </ul>
+            </div>
+            <div class="fd-4">
+              <img src="assets/icons/ft-d-sign.svg" alt="" />
+            </div>
+            <div class="f-line"></div>
+            <div class="cr">© 2018 Car rental LLC - All Rights Reserved.</div>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="script.js"></script>
@@ -475,6 +608,63 @@
           this.previousElementSibling.showPicker();
         });
       });
+    </script>
+    <script>
+      // functionality for quick book button
+      function toggleQuickBook() {
+        var content = document.getElementById("quickBookContent");
+        var summerPromotion = document.querySelector(
+          ".summer_promotion_container"
+        );
+
+        if (content.classList.contains("show")) {
+          content.classList.remove("show");
+          summerPromotion.classList.remove("show-content");
+        } else {
+          content.classList.add("show");
+          summerPromotion.classList.add("show-content");
+        }
+      }
+
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Set default tab
+      document.getElementById("sameAsPickUp").style.display = "block";
+    </script>
+    <script>
+      document
+        .getElementById("menuButton")
+        .addEventListener("click", function () {
+          const sidebar = document.querySelector(".sidebar");
+          sidebar.classList.toggle("active");
+
+          if (sidebar.classList.contains("active")) {
+            sidebar.style.display = "block";
+          } else {
+            sidebar.style.display = "none";
+          }
+        });
+
+      document
+        .getElementById("menu_close")
+        .addEventListener("click", function () {
+          const sidebar = document.querySelector(".sidebar");
+          const menuButton = document.getElementById("menuButton");
+          sidebar.classList.remove("active");
+          sidebar.style.display = "none"; // Hide close button when sidebar is not active
+        });
     </script>
   </body>
 </html>
