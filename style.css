@@ -960,17 +960,14 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .mobile-inputs {
   width: 80%;
   padding: 4vw;
-  display: flex;
+  display: none; /* Hidden by default */
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.mobile-inputs {
-  display: none;
-}
 
-.input-nav{
-  display: none;
+.input-nav {
+  display: none; /* Hidden by default */
 }
 
 /* -----screen optimization at 1200px--------- */
@@ -1143,7 +1140,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   }
 
   .mobile-inputs {
-    width: 90%;
+    width: 100%;
+    display: flex; /* Visible on mobile */
   }
 
   .input-nav {
@@ -1155,7 +1153,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     align-items: center;
     justify-content: center;
     margin-bottom: 5vh;
+    font-size: 13px;
   }
+
   .input-nav ul {
     display: flex;
     width: 80%;
@@ -1163,19 +1163,21 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     gap: 3vw;
     list-style: none;
   }
+
   .input-nav ul li:hover {
     border-bottom: 1px solid black;
   }
+
   .mob-vehicle-select {
     border: none;
   }
 
   .inputs {
     display: none;
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .input-btn {
     margin-left: 4vw;
     margin-top: 2vh;
@@ -1183,6 +1185,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     width: 90%;
   }
+
   .input-btn button {
     width: 48%;
     background-color: white;
@@ -1197,13 +1200,12 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     border: 2px solid #e21e26;
     text-align: center;
   }
-  .input-btn {
-    display: none;
-  }
+
   .input-btn button:hover {
     background-color: #e21e26;
     color: #f8f8f8;
   }
+
   .inputs input {
     width: 100%;
     background-color: #f6f7f9;
@@ -1324,6 +1326,64 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     line-height: 24px;
     margin-left: 10px;
     margin-top: 10px;
+  }
+
+  .map-inp{
+    position: absolute;
+    top: 64%;
+    right: 260px;
+    transform: translateY(-45%);
+    cursor: pointer;
+  }
+
+  .map-input{
+    position: absolute;
+    top: 74%;
+    right: 260px;
+    transform: translateY(-45%);
+    cursor: pointer;
+  }
+
+  .caldr-img {
+    position: absolute;
+    top: 74%;
+    right: 260px;
+    transform: translateY(-45%);
+    cursor: pointer;
+  }
+
+  .calndar-img {
+    position: absolute;
+    top: 94%;
+    right: 260px;
+    transform: translateY(-45%);
+    cursor: pointer;
+  }
+
+  .caldr-img img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .calndr-img{
+    position: absolute;
+    top: 84%;
+    right: 260px;
+    transform: translateY(-45%);
+    cursor: pointer;
+  }
+
+  .calndr-img img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .b3{
+    background-color: #e21e26;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
   }
 
   .mits-text .p1,

@@ -225,15 +225,42 @@
 
         <div class="inputs" id="inputs1" style="display: none">
           <input class="loc-ico" type="text" placeholder="Pick-Up Location" />
+          <div class="map-inp">
+            <img src="assets/icons/re_map.svg" />
+          </div>
+          <input
+            class="date-ico"
+            type="datetime-local"
+            placeholder="pickup date"
+          />
           <input class="date-ico" type="datetime-local" />
-          <input class="date-ico" type="datetime-local" />
+          <div class="calndr-img">
+            <img src="assets/icons/red_calender.svg" alt="Calendar" />
+          </div>
+          <div class="caldr-img">
+            <img src="assets/icons/red_calender.svg" alt="Calendar" />
+          </div>
+          <button class="b3">Search</button>
         </div>
 
         <div class="inputs" id="inputs2">
+          <div class="map-inp">
+            <img src="assets/icons/re_map.svg" />
+          </div>
+          <div class="map-input">
+            <img src="assets/icons/re_map.svg" />
+          </div>
           <input class="loc-ico" type="text" placeholder="Pick-Up Location" />
           <input class="loc-ico" type="text" placeholder="Drop-Off Location" />
           <input class="date-ico" type="datetime-local" />
           <input class="date-ico" type="datetime-local" />
+          <button class="b3">Search</button>
+          <div class="calndr-img">
+            <img src="assets/icons/red_calender.svg" alt="Calendar" />
+          </div>
+          <div class="calndar-img">
+            <img src="assets/icons/red_calender.svg" alt="Calendar" />
+          </div>
         </div>
       </div>
 
@@ -637,17 +664,37 @@
         });
     </script>
     <script>
-      const bookCar = document.querySelector(".b1");
-      const mobIn = document.querySelector(".mobile-inputs");
-      document.getElementById("nav-1").addEventListener("click", function () {
-        showInputs("inputs1");
-      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ensure the mobile inputs are hidden initially
+        const mobIn = document.querySelector(".mobile-inputs");
+        mobIn.style.display = "none";
 
-      document.getElementById("nav-2").addEventListener("click", function () {
-        showInputs("inputs2");
-      });
-      bookCar.addEventListener("click", function () {
-        mobIn.style.display = "block";
+        // Show "Same as Pick-Up" by default when mobile inputs are visible
+        document.getElementById("nav-1").addEventListener("click", function () {
+          showInputs("inputs1");
+        });
+
+        document.getElementById("nav-2").addEventListener("click", function () {
+          showInputs("inputs2");
+        });
+
+        // Set up the "Book" button click event
+        const bookCar = document.querySelector(".b1");
+        bookCar.addEventListener("click", function () {
+          if (mobIn.style.display === "none" || mobIn.style.display === "") {
+            mobIn.style.display = "flex"; // Show mobile inputs
+            showInputs("inputs1"); // Display "Same as Pick-Up" by default
+          } else {
+            mobIn.style.display = "none"; // Hide mobile inputs
+          }
+        });
+
+        // Hide mobile inputs when switching to desktop view
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 786) {
+            mobIn.style.display = "none";
+          }
+        });
       });
 
       function showInputs(id) {
@@ -657,7 +704,7 @@
         });
 
         // Show the selected input section
-        document.getElementById(id).style.display = "block";
+        document.getElementById(id).style.display = "flex";
       }
     </script>
   </body>
