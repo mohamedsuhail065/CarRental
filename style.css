@@ -1328,56 +1328,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     margin-top: 10px;
   }
 
-  .map-inp{
-    position: absolute;
-    top: 64%;
-    right: 260px;
-    transform: translateY(-45%);
-    cursor: pointer;
-  }
-
-  .map-input{
-    position: absolute;
-    top: 74%;
-    right: 260px;
-    transform: translateY(-45%);
-    cursor: pointer;
-  }
-
-  .caldr-img {
-    position: absolute;
-    top: 74%;
-    right: 260px;
-    transform: translateY(-45%);
-    cursor: pointer;
-  }
-
-  .calndar-img {
-    position: absolute;
-    top: 94%;
-    right: 260px;
-    transform: translateY(-45%);
-    cursor: pointer;
-  }
-
-  .caldr-img img {
-    width: 10px;
-    height: 10px;
-  }
-
-  .calndr-img{
-    position: absolute;
-    top: 84%;
-    right: 260px;
-    transform: translateY(-45%);
-    cursor: pointer;
-  }
-
-  .calndr-img img {
-    width: 10px;
-    height: 10px;
-  }
-
   .b3{
     background-color: #e21e26;
     color: #ffffff;
