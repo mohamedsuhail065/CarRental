@@ -204,35 +204,39 @@
       </div>
       <!-- button for responsive design -->
       <div class="res-buttons">
-        <button class="b1" onclick="toggleQuickBook()" id="quickBookButton">
-          Book a Car
-        </button>
+        <button class="b1">Book a Car</button>
         <button class="b2">Quick Book</button>
       </div>
-      <div id="quickBookContent" class="quick_book_content">
-        <div class="tab">
-          <button
-            class="tablinks active"
-            onclick="openTab(event, 'sameAsPickUp')"
-          >
-            Same as Pick-Up
-          </button>
-          <button class="tablinks" onclick="openTab(event, 'differentDropOff')">
-            Different Drop-Off
-          </button>
-          <select id="vehicleType" name="vehicleType">
-            <option value="car">Car</option>
-          </select>
+
+      <div class="mobile-inputs">
+        <div class="input-nav">
+          <ul>
+            <li id="nav-1">Same as Pick-Up</li>
+            <li id="nav-2">Diffrent Drop Off</li>
+            <li>
+              <select class="mob-vehicle-select" name="" id="">
+                <option value="type">Vehicle Type</option>
+                <option value="car">CAR</option>
+                <option value="bike">Bike</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+
+        <div class="inputs" id="inputs1" style="display: none">
+          <input class="loc-ico" type="text" placeholder="Pick-Up Location" />
+          <input class="date-ico" type="datetime-local" />
+          <input class="date-ico" type="datetime-local" />
+        </div>
+
+        <div class="inputs" id="inputs2">
+          <input class="loc-ico" type="text" placeholder="Pick-Up Location" />
+          <input class="loc-ico" type="text" placeholder="Drop-Off Location" />
+          <input class="date-ico" type="datetime-local" />
+          <input class="date-ico" type="datetime-local" />
         </div>
       </div>
-      <div class="sameAsPickup">
-    <select class="pickup">
-      <option value=""></option>
-    </select>
-    <select class="pickup">
-      <option value=""></option>
-    </select>
-      </div>
+
       <!-- banner -->
       <div class="banner">
         <p>
@@ -610,40 +614,6 @@
       });
     </script>
     <script>
-      // functionality for quick book button
-      function toggleQuickBook() {
-        var content = document.getElementById("quickBookContent");
-        var summerPromotion = document.querySelector(
-          ".summer_promotion_container"
-        );
-
-        if (content.classList.contains("show")) {
-          content.classList.remove("show");
-          summerPromotion.classList.remove("show-content");
-        } else {
-          content.classList.add("show");
-          summerPromotion.classList.add("show-content");
-        }
-      }
-
-      function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      // Set default tab
-      document.getElementById("sameAsPickUp").style.display = "block";
-    </script>
-    <script>
       document
         .getElementById("menuButton")
         .addEventListener("click", function () {
@@ -665,6 +635,30 @@
           sidebar.classList.remove("active");
           sidebar.style.display = "none"; // Hide close button when sidebar is not active
         });
+    </script>
+    <script>
+      const bookCar = document.querySelector(".b1");
+      const mobIn = document.querySelector(".mobile-inputs");
+      document.getElementById("nav-1").addEventListener("click", function () {
+        showInputs("inputs1");
+      });
+
+      document.getElementById("nav-2").addEventListener("click", function () {
+        showInputs("inputs2");
+      });
+      bookCar.addEventListener("click", function () {
+        mobIn.style.display = "block";
+      });
+
+      function showInputs(id) {
+        // Hide all input sections
+        document.querySelectorAll(".inputs").forEach(function (inputSection) {
+          inputSection.style.display = "none";
+        });
+
+        // Show the selected input section
+        document.getElementById(id).style.display = "block";
+      }
     </script>
   </body>
 </html>
