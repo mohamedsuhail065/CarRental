@@ -488,6 +488,7 @@
           <div class="faq-answer">Can i book for any period of time?</div>
         </div>
       </div>
+      <!-- desktop footer -->
       <footer>
         <div class="footer">
           <div class="footer-up">
@@ -611,6 +612,7 @@
       </footer>
     </div>
     <script src="script.js"></script>
+    <!-- manual calculator picker script -->
     <script>
       document.querySelectorAll(".cal-img").forEach(function (calImg) {
         calImg.addEventListener("click", function () {
@@ -619,6 +621,8 @@
         });
       });
     </script>
+
+    <!-- script for mobile book button -->
     <script>
       document
         .getElementById("menuButton")
@@ -639,16 +643,13 @@
           const sidebar = document.querySelector(".sidebar");
           const menuButton = document.getElementById("menuButton");
           sidebar.classList.remove("active");
-          sidebar.style.display = "none"; // Hide close button when sidebar is not active
+          sidebar.style.display = "none";
         });
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Ensure the mobile inputs are hidden initially
         const mobIn = document.querySelector(".mobile-inputs");
         mobIn.style.display = "none";
-
-        // Show "Same as Pick-Up" by default when mobile inputs are visible
         document.getElementById("nav-1").addEventListener("click", function () {
           showInputs("inputs1");
         });
@@ -657,12 +658,11 @@
           showInputs("inputs2");
         });
 
-        // Set up the "Book" button click event
         const bookCar = document.querySelector(".b1");
         bookCar.addEventListener("click", function () {
           if (mobIn.style.display === "none" || mobIn.style.display === "") {
             mobIn.style.display = "flex"; // Show mobile inputs
-            showInputs("inputs1"); // Display "Same as Pick-Up" by default
+            showInputs("inputs1");
           } else {
             mobIn.style.display = "none"; // Hide mobile inputs
           }
@@ -677,12 +677,9 @@
       });
 
       function showInputs(id) {
-        // Hide all input sections
         document.querySelectorAll(".inputs").forEach(function (inputSection) {
           inputSection.style.display = "none";
         });
-
-        // Show the selected input section
         document.getElementById(id).style.display = "flex";
       }
     </script>
