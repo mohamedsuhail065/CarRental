@@ -223,27 +223,43 @@
         </div>
 
         <div class="inputs" id="inputs1" style="display: none">
-          <img src="assets/icons/re_map.svg" class="red_cal"/>
+          <img src="assets/icons/re_map.svg" class="red_cal" />
           <input type="text" placeholder="Pick-Up Location" />
-          <img src="assets/icons/red_calender.svg" alt="Calendar" class="red_cal"/>
+          <img
+            src="assets/icons/red_calender.svg"
+            alt="Calendar"
+            class="red_cal"
+          />
           <input
             class="date-ico"
             type="datetime-local"
             placeholder="pickup date"
           />
-          <img src="assets/icons/red_calender.svg" alt="Calendar" class="red_cal"/>
+          <img
+            src="assets/icons/red_calender.svg"
+            alt="Calendar"
+            class="red_cal"
+          />
           <input class="date-ico" type="datetime-local" />
           <button class="b3">Search</button>
         </div>
 
         <div class="inputs" id="inputs2">
-          <img src="assets/icons/re_map.svg" class="red_cal"/>
+          <img src="assets/icons/re_map.svg" class="red_cal" />
           <input class="loc-ico" type="text" placeholder="Pick-Up Location" />
-          <img src="assets/icons/re_map.svg" class="red_cal"/>
+          <img src="assets/icons/re_map.svg" class="red_cal" />
           <input class="loc-ico" type="text" placeholder="Drop-Off Location" />
-          <img src="assets/icons/red_calender.svg" alt="Calendar" class="red_cal"/>
+          <img
+            src="assets/icons/red_calender.svg"
+            alt="Calendar"
+            class="red_cal"
+          />
           <input class="date-ico" type="datetime-local" />
-          <img src="assets/icons/red_calender.svg" alt="Calendar" class="red_cal"/>
+          <img
+            src="assets/icons/red_calender.svg"
+            alt="Calendar"
+            class="red_cal"
+          />
           <input class="date-ico" type="datetime-local" />
           <button class="b3">Search</button>
         </div>
@@ -314,24 +330,31 @@
       <div class="promo">
         <div class="promo-left">
           <h6>Subscribe here for exclusive offers and updates!</h6>
-          <div class="promo-input">
-            <input type="text" name="name" placeholder="Name" /><input
-              type="text"
-              name="email"
-              placeholder="Email"
-              class="input2"
-            />
-          </div>
-          <p class="promo-d">
-            Don't miss out! enter your email and your name, then hit subscribe
-            to unlock a world of special offers and details.
-          </p>
-          <p class="promo-m">
-            Please select the ways you would like to hear from Diamondlease, and
-            confirm that you’re happy for us to store your data in line with our
-            Privacy Policy.
-          </p>
-          <button>Subscribe</button>
+          <form action="" id="myForm">
+            <div class="promo-input">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                class="input1"
+              /> <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                class="input2"
+              /> <span id="nameError" class="error1"></span><span id="emailError" class="error2"></span>
+            </div>
+            <p class="promo-d">
+              Don't miss out! enter your email and your name, then hit subscribe
+              to unlock a world of special offers and details.
+            </p>
+            <p class="promo-m">
+              Please select the ways you would like to hear from Diamondlease,
+              and confirm that you’re happy for us to store your data in line
+              with our Privacy Policy.
+            </p>
+            <button>Subscribe</button>
+          </form>
         </div>
         <div class="promo-right">
           <div class="promo-img">
