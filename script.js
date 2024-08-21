@@ -46,6 +46,61 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 
   if (isValid) {
     alert("Subscribed");
-
   }
 });
+
+//when input valid details error disappear
+
+document
+  .querySelector('input[name="name"]')
+  .addEventListener("input", function () {
+    if (this.value.trim() !== "") {
+      document.getElementById("nameError").textContent = "";
+    }
+  });
+
+document
+  .querySelector('input[name="email"]')
+  .addEventListener("input", function () {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailPattern.test(this.value.trim()) || this.value.trim()!=="") {
+      document.getElementById("emailError").textContent = "";
+    }
+  });
+
+//phone number validation
+
+document.getElementById("form2").addEventListener("submit", function (event) {
+  event.preventDefault();
+  document.getElementById("phoneError").textContent = "";
+  let isGood = true;
+  let phone = document.querySelector('input[name="phone"]').value.trim();
+  if (phone === "") {
+    //check if its empty
+    isGood = false;
+    document.getElementById("phoneError").textContent =
+      "Phone number is required.";
+  } else if (phone.length < 10) {
+    //check the length
+    document.getElementById("phoneError").textContent =
+      "Phone number must be at least 10 digits long";
+    isGood = false;
+  } else {
+    isGood = true;
+  }
+  if (isGood) {
+    alert("Link Sent");
+  }
+});
+
+//when input valid details error disappear
+
+// Add an event listener for the input event
+document
+  .querySelector('input[name="phone"]')
+  .addEventListener("input", function () {
+    let phone = this.value.trim();
+    if (phone.length >= 10) {
+      document.getElementById("phoneError").textContent = "";
+    }
+  });

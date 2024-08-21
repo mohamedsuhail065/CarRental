@@ -365,8 +365,12 @@
               Enter your number and receive&nbsp; a direct link to download the
               app
             </p>
+            <form id="form2" style="display: flex;flex-direction: column;">
             <input type="tel" name="phone" placeholder="Enter Phone Number" />
-            <button>Get the link</button>
+            <span id="phoneError" class="error3"></span>
+            <button type="submit">Get the link</button>
+          </form>
+          
             <span>Get in on</span>
             <div class="promor-img">
               <img src="assets/icons/app_tr.svg" />
@@ -656,10 +660,10 @@
       document
         .getElementById("menuButton")
         .addEventListener("click", function () {
-          const sidebar = document.querySelector(".sidebar");
+          const sidebar = document.querySelector(".sidebar"); // menu button for opening the sidebar
           sidebar.classList.toggle("active");
 
-          if (sidebar.classList.contains("active")) {
+          if (sidebar.classList.contains("active")) {        // if the sidebar class contains active then sidebar will display 
             sidebar.style.display = "block";
           } else {
             sidebar.style.display = "none";
@@ -670,7 +674,7 @@
         .getElementById("menu_close")
         .addEventListener("click", function () {
           const sidebar = document.querySelector(".sidebar");
-          const menuButton = document.getElementById("menuButton");
+          const menuButton = document.getElementById("menuButton");  //closing menu button
           sidebar.classList.remove("active");
           sidebar.style.display = "none";
         });
@@ -680,7 +684,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const mobIn = document.querySelector(".mobile-inputs");
         mobIn.style.display = "none";
-        document.getElementById("nav-1").addEventListener("click", function () {
+        document.getElementById("nav-1").addEventListener("click", function () {         //will show the first div
           showInputs("inputs1");
         });
 

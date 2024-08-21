@@ -603,6 +603,11 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   left: 37%;
 }
 
+.error3{
+  color: #ffffff;
+  font-size: 14px;
+}
+
 
 
 .promo-right {
@@ -662,7 +667,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-weight: 500;
   line-height: 21px;
   text-align: left;
-  margin-top: 45px;
+  margin-top: 22px;
   color: #ffffff;
   margin-left: 6px;
 }
