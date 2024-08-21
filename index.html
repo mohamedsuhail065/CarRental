@@ -192,13 +192,15 @@
           <div class="header-icon">
             <p>Download our App for easy accessibility anytime, anywhere!</p>
             <div>
-              <img src="assets/icons/app.svg" />
-              <img src="assets/icons/play.svg" />
+              <a href="https://play.google.com/store"
+                ><img src="assets/icons/app.svg"
+              /></a>
+              <a href="apps.apple.com"> <img src="assets/icons/play.svg" /></a>
             </div>
           </div>
         </div>
         <div class="icons-right">
-          <img src="assets/icons/r_phone.svg" />
+          <a href="tel: 9746381958"> <img src="assets/icons/r_phone.svg" /></a>
           <img src="assets/icons/24x7.svg" alt="" class="twenty_four" />
         </div>
       </div>
@@ -337,12 +339,15 @@
                 name="name"
                 placeholder="Name"
                 class="input1"
-              /> <input
+              />
+              <input
                 type="text"
                 name="email"
                 placeholder="Email"
                 class="input2"
-              /> <span id="nameError" class="error1"></span><span id="emailError" class="error2"></span>
+              />
+              <span id="nameError" class="error1"></span
+              ><span id="emailError" class="error2"></span>
             </div>
             <p class="promo-d">
               Don't miss out! enter your email and your name, then hit subscribe
@@ -365,24 +370,30 @@
               Enter your number and receive&nbsp; a direct link to download the
               app
             </p>
-            <form id="form2" style="display: flex;flex-direction: column;">
-            <input type="tel" name="phone" placeholder="Enter Phone Number" />
-            <span id="phoneError" class="error3"></span>
-            <button type="submit">Get the link</button>
-          </form>
-          
+            <form id="form2" style="display: flex; flex-direction: column">
+              <input type="tel" name="phone" placeholder="Enter Phone Number" />
+              <span id="phoneError" class="error3"></span>
+              <button type="submit">Get the link</button>
+            </form>
+
             <span>Get in on</span>
             <div class="promor-img">
-              <img src="assets/icons/app_tr.svg" />
-              <img src="assets/icons/play_tr.svg" />
+              <a href="apps.apple.com">
+                <img src="assets/icons/app_tr.svg"
+              /></a>
+              <a href="https://play.google.com/store">
+                <img src="assets/icons/play_tr.svg"
+              /></a>
             </div>
           </div>
           <!-- promo for mobile -->
           <div class="promo-text-m">
             <span>Get in on</span>
             <div class="promor-img">
-              <img src="assets/icons/app_tr.svg" />
-              <img src="assets/icons/play_tr.svg" />
+              <a href="apps.apple.com"><img src="assets/icons/app_tr.svg" /></a>
+              <a href="https://play.google.com/store"
+                ><img src="assets/icons/play_tr.svg"
+              /></a>
             </div>
             <p>
               Enter your number and receive&nbsp; a direct link to download the
@@ -655,7 +666,7 @@
       });
     </script>
 
-   <!-- mobile sidebar -->
+    <!-- mobile sidebar -->
     <script>
       document
         .getElementById("menuButton")
@@ -663,7 +674,8 @@
           const sidebar = document.querySelector(".sidebar"); // menu button for opening the sidebar
           sidebar.classList.toggle("active");
 
-          if (sidebar.classList.contains("active")) {        // if the sidebar class contains active then sidebar will display 
+          if (sidebar.classList.contains("active")) {
+            // if the sidebar class contains active then sidebar will display
             sidebar.style.display = "block";
           } else {
             sidebar.style.display = "none";
@@ -674,17 +686,18 @@
         .getElementById("menu_close")
         .addEventListener("click", function () {
           const sidebar = document.querySelector(".sidebar");
-          const menuButton = document.getElementById("menuButton");  //closing menu button
+          const menuButton = document.getElementById("menuButton"); //closing menu button
           sidebar.classList.remove("active");
           sidebar.style.display = "none";
         });
     </script>
-     <!-- script for mobile book button -->
+    <!-- script for mobile book button -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const mobIn = document.querySelector(".mobile-inputs");
         mobIn.style.display = "none";
-        document.getElementById("nav-1").addEventListener("click", function () {         //will show the first div
+        document.getElementById("nav-1").addEventListener("click", function () {
+          //will show the first div
           showInputs("inputs1");
         });
 
